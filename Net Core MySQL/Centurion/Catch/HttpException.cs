@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Catch
 {
+    /// <summary>
+    /// This class allow you to manager all exception response
+    /// </summary>
 	public class HttpException : HttpRequestException
     {
 		public HttpException(StatusCode statusCode)
@@ -19,9 +22,13 @@ namespace Catch
 
     public class HttpResult : ObjectResult
     {
+
+        /// <summary>
+        /// Response for if case of catch exception
+        /// </summary>
+        /// <param name="ex"></param>
         public HttpResult(HttpRequestException ex) : base(ex)
         {
-
             StatusCode = (int?)ex.StatusCode;
             Value = new HttpResultContent()
             {
@@ -30,6 +37,10 @@ namespace Catch
             };
         }
 
+        /// <summary>
+        /// Response for if not have exception
+        /// </summary>
+        /// <param name="value"></param>
         public HttpResult(object? value) : base(value)
         {
             StatusCode = (int)HttpStatusCode.OK;

@@ -3,6 +3,9 @@ using Models;
 
 namespace Session
 {
+    /// <summary>
+    /// This class allow you tu manager session of all users in this single intances
+    /// </summary>
     public sealed class SessionManagement
     {
         public static List<UserSession> UserSessions { get; set; }
@@ -22,17 +25,32 @@ namespace Session
             return _Instance;
         }
 
+        /// <summary>
+        /// This method allow verify if token exis in one ou more session
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
         public static bool Exist(string token)
         {
             return UserSessions.SingleOrDefault(s => s.Token.Equals(token)) is not null;
-        } 
+        }
 
+        /// <summary>
+        /// This method allow get session associate to this token
+        /// </summary>
+        /// <param name="token">Toke of user</param>
+        /// <returns>UserSession</returns>
         public static UserSession? Get(string token)
         {
             UserSession? sessions = UserSessions.SingleOrDefault(s => s.Token.Equals(token));
             return sessions;
         }
 
+        /// <summary>
+        /// This method allow get session associate to user id
+        /// </summary>
+        /// <param name="userId">User if</param>
+        /// <returns>UserSession</returns>
         public static UserSession? Get(int userId)
         {
             UserSession? sessions = UserSessions.SingleOrDefault(s => s.User.Id.Equals(userId));
@@ -40,6 +58,11 @@ namespace Session
             return sessions;
         }
 
+        /// <summary>
+        /// This method allow add new session of a new user connexion
+        /// </summary>
+        /// <param name="userSession"></param>
+        /// <exception cref="HttpException"></exception>
         public static void Add(UserSession userSession)
         {
             if (userSession is null)
@@ -51,6 +74,11 @@ namespace Session
                 UserSessions.Add(userSession);
         }
 
+        /// <summary>
+        /// This method allow to remove a session from a token
+        /// </summary>
+        /// <param name="tokenService"></param>
+        /// <exception cref="ArgumentException"></exception>
         public static void Remove(string tokenService)
         {
             UserSession? userSession = UserSessions.SingleOrDefault(u => u.Token.Equals(tokenService));

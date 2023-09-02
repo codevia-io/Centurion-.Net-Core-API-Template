@@ -12,4 +12,7 @@
   <ItemGroup>
     <Folder Include="Interfaces\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Enums\Enums.csproj" />
+  </ItemGroup>
 </Project>

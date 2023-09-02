@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace Helpers
+namespace Catch
 {
 	public static class CamelCase
 	{
-		public static string Get(string content)
+		public static string ToString(string content)
 		{
 			var camel = Regex.Replace(
                 Regex.Replace(

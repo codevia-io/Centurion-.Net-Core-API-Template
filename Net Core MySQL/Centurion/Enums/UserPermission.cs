@@ -1,8 +1,8 @@
 ﻿using System;
 namespace Enums
 {
-	public enum Permisions
-	{
+	public enum UserPermission
+    {
 		Admin,
 		User,
 		Visitor

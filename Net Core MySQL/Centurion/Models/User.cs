@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Enums;
 namespace Models
 {
 	public class User
@@ -9,6 +9,7 @@ namespace Models
 		public string UserName { get; set; }
 		public string Email { get; set; }
 		public int Telephone { get; set; }
+		public UserPermission Permision { get; set; }
 	}
 }
 

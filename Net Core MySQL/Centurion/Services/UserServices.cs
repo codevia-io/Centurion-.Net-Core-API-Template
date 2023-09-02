@@ -2,9 +2,9 @@
 using Models;
 using Models.Forms;
 using Repository;
-using Helpers;
 using System.Net;
 using Catch;
+using Helpers;
 
 namespace Services
 {
@@ -18,40 +18,53 @@ namespace Services
 
         public void Created(Sigin model)
         {
-            if (model is null)
-                throw new NullReferenceException();
-
-            _Repository.Created(AutoMapper.Convert<Entities.User>(model));
+            throw new HttpException(StatusCode.NotImplemented);
         }
 
         public void Delete(int Id)
         {
-            throw new HttpException(HttpStatusCode.NotImplemented);
+            throw new HttpException(StatusCode.NotImplemented);
         }
 
         public User Find(int Id)
         {
-            throw new HttpException(HttpStatusCode.NotImplemented);
+            return AutoMapper.Convert<User>(_Repository.Find(Id));
+        }
+
+        public User Find(string userName)
+        {
+            return AutoMapper.Convert<User>(_Repository.Find(userName));
         }
 
         public User Find(string key, string value)
         {
-            throw new HttpException(HttpStatusCode.NotImplemented);
+            return AutoMapper.Convert<User>(_Repository.Find(key, value));
         }
 
         public User Find(Dictionary<string, string> pairs)
         {
-            throw new HttpException(HttpStatusCode.NotImplemented);
+            throw new HttpException(StatusCode.NotImplemented);
         }
 
         public List<User> List(int page = 0, int count = 10)
         {
-            throw new HttpException("The method List of User services is not implemented", HttpStatusCode.NotImplemented);
+            throw new HttpException(StatusCode.NotImplemented);
         }
 
         public void Update(User model)
         {
-            throw new HttpException(HttpStatusCode.NotImplemented);
+            throw new HttpException(StatusCode.NotImplemented);
+        }
+
+        public void VerifyPassword(int userId, string password)
+        {
+            if (password is null)
+                throw new ArgumentException("Password is null");
+
+            if (password == string.Empty)
+                throw new ArgumentException("Password is emtpy");
+
+            _Repository.VerifyPassword(userId, password);
         }
     }
 }

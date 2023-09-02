@@ -18,6 +18,7 @@
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
+                new Repository.DataBaseInitialize();
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }

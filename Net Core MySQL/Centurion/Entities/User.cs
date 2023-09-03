@@ -1,5 +1,6 @@
 ﻿using Entities.Interfaces;
 using Enums;
+
 namespace Entities
 {
     public class User : EntityBase, IUser

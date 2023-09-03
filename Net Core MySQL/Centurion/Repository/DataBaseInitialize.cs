@@ -24,11 +24,11 @@ namespace Repository
 		{
 			User user1 = new User()
 			{
-				FirsName = "José Miguel",
-				LastName = "Ramos",
-				Email = "j.ramos@codevia.io",
+				FirsName = "Miguel",
+				LastName = "Durant",
+				Email = "m.durand@codevia.io",
 				Telephone = 078987654,
-				UserName = "j.ramos",
+				UserName = "m.durand",
 				Password = Helpers.PasswordManagement.HashPassword("admin"),
 				permision = Enums.UserPermission.Admin
 			};

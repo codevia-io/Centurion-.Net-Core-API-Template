@@ -1,14 +1,14 @@
-﻿using Models;
-using Catch;
+﻿using Catch;
 using Helpers;
 using Microsoft.AspNetCore.Http;
+using Models;
 
 namespace Session
 {
-	/// <summary>
-	/// This Class allow you to manager Tokens
-	/// </summary>
-	public static class TokenManagement
+    /// <summary>
+    /// This Class allow you to manager Tokens
+    /// </summary>
+    public static class TokenManagement
 	{
         private static SessionManagement SessionManagement = SessionManagement.GetInstance();
 		public static string TokenAppName = $"user.appname.token";

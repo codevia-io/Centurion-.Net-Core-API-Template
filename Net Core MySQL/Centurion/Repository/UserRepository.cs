@@ -1,9 +1,8 @@
-﻿using System.Net;
-using System.Reflection;
-using Catch;
+﻿using Catch;
 using Entities;
 using Helpers;
 using Repository.Interfaces;
+
 namespace Repository
 {
     public class UserRepository : ICreateRepository<User>, IReadRepository<User>, IUpdateRepository<User>, IDeleteRepository

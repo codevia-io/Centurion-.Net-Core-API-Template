@@ -1,7 +1,7 @@
 ﻿using System.Net;
-using Microsoft.AspNetCore.Mvc;
 using Catch;
 using Enums;
+using Microsoft.AspNetCore.Mvc;
 using Session;
 
 namespace API
@@ -30,7 +30,7 @@ namespace API
                     throw new HttpException("Try Api Response : Service is null", StatusCode.InternalServerError);
 
                 if (headers is not null && permission is not UserPermission.Visitor)
-                    Authentication.Auth(TokenManagement.Get(headers), permission);
+                    Authentication.Try(TokenManagement.Get(headers), permission);
 
                 object? result = services.Invoke();
                 return new HttpResult(result);
@@ -59,7 +59,7 @@ namespace API
                     throw new HttpException("Try Api Response : Service is null", StatusCode.InternalServerError);
 
                 if (headers is not null && permission is not UserPermission.Visitor)
-                    Authentication.Auth(TokenManagement.Get(headers), permission);
+                    Authentication.Try(TokenManagement.Get(headers), permission);
 
                 services.Invoke();
                 return new HttpResult(HttpStatusCode.OK);

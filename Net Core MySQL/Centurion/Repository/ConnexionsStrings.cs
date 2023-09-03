@@ -1,7 +1,6 @@
-﻿using System;
-namespace Repository
+﻿namespace Repository
 {
-	public static class ConnexionsStrings
+    public static class ConnexionsStrings
 	{
 		public static string DataBaseName = "database-name";
 

@@ -1,7 +1,6 @@
-﻿using System;
-namespace Entities.Interfaces
+﻿namespace Entities.Interfaces
 {
-	public interface IUser
+    public interface IUser
 	{
 		public string FirsName { get; set; }
 		public string? LastName { get; set; }

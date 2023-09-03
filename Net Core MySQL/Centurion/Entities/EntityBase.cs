@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Entities.Interfaces;
+
 namespace Entities
 {
     public class EntityBase : IEntityBase

@@ -1,7 +1,6 @@
-﻿using System;
-namespace Models.Forms
+﻿namespace Models.Forms
 {
-	public class Sigin
+    public class Sigin
 	{
         public string FirsName { get; set; }
         public string LastName { get; set; }

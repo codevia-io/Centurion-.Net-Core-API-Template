@@ -1,5 +1,4 @@
-﻿
-using System.Net;
+﻿using System.Net;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Catch
@@ -54,8 +53,8 @@ namespace Catch
 
     public class HttpResultContent
     {
-        public object Result { get; set; }
-        public object Message { get; set; }
+        public required object? Result { get; set; }
+        public required object Message { get; set; }
     }
 
     public enum StatusCode

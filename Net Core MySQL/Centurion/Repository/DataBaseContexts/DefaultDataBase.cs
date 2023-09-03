@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Entities;
+﻿using Entities;
+using Microsoft.EntityFrameworkCore;
+
 namespace Repository.DataBaseContexts
 {
-	public class DefaultDataBase : DbContext
+    public class DefaultDataBase : DbContext
     {
 		public DefaultDataBase()
 		{

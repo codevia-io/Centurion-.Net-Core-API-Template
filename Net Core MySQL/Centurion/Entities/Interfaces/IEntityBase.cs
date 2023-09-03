@@ -1,7 +1,6 @@
-﻿using System;
-namespace Entities.Interfaces
+﻿namespace Entities.Interfaces
 {
-	public interface IEntityBase
+    public interface IEntityBase
 	{
 		public int Id { get; set; }
 		public User CreatedBy { get; set; }

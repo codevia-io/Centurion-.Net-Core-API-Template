@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1706.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "Centurion\API.csproj", "{9B5496B4-A6F3-4DBC-A99E-F0C9391257E1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{05DDD9D4-052A-4E2A-8F42-5A96971F5519}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{3AD5F332-3414-4942-AEF9-EFD8F1BBBE3C}"
@@ -17,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enums", "Enums\Enums.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{17022B31-216B-468B-B21A-E422AEC48E8D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Busisnnes", "Busisnnes", "{430984F1-2C11-4BBE-926D-DD8EF31CC8DF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{430984F1-2C11-4BBE-926D-DD8EF31CC8DF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dal", "Dal", "{8EE7FD8F-3BFD-4E4C-8190-F5643EB2A375}"
 EndProject
@@ -25,16 +23,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catch", "Catch\Catch.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session", "Session\Session.csproj", "{F501C80A-DD89-40A6-BA19-02370D81DFA8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dispatcher", "Dispatcher", "{DCF0C28F-B844-4C6C-B20E-76E6D1107DB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{63CB46F0-D5B7-44F5-A93C-DD5B4CCE422F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBases", "DataBases\DataBases.csproj", "{BB9EC5E7-581F-444C-9EB3-7A487BC56854}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9B5496B4-A6F3-4DBC-A99E-F0C9391257E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B5496B4-A6F3-4DBC-A99E-F0C9391257E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B5496B4-A6F3-4DBC-A99E-F0C9391257E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B5496B4-A6F3-4DBC-A99E-F0C9391257E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{05DDD9D4-052A-4E2A-8F42-5A96971F5519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{05DDD9D4-052A-4E2A-8F42-5A96971F5519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05DDD9D4-052A-4E2A-8F42-5A96971F5519}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,6 +67,14 @@ Global
 		{F501C80A-DD89-40A6-BA19-02370D81DFA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F501C80A-DD89-40A6-BA19-02370D81DFA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F501C80A-DD89-40A6-BA19-02370D81DFA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63CB46F0-D5B7-44F5-A93C-DD5B4CCE422F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63CB46F0-D5B7-44F5-A93C-DD5B4CCE422F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63CB46F0-D5B7-44F5-A93C-DD5B4CCE422F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63CB46F0-D5B7-44F5-A93C-DD5B4CCE422F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB9EC5E7-581F-444C-9EB3-7A487BC56854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB9EC5E7-581F-444C-9EB3-7A487BC56854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB9EC5E7-581F-444C-9EB3-7A487BC56854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB9EC5E7-581F-444C-9EB3-7A487BC56854}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,5 +91,7 @@ Global
 		{1A19EF5F-47D7-439A-9ADB-2766A16EA7D8} = {8EE7FD8F-3BFD-4E4C-8190-F5643EB2A375}
 		{71A6991F-91A8-4459-B156-94E781E02AE2} = {430984F1-2C11-4BBE-926D-DD8EF31CC8DF}
 		{F501C80A-DD89-40A6-BA19-02370D81DFA8} = {430984F1-2C11-4BBE-926D-DD8EF31CC8DF}
+		{63CB46F0-D5B7-44F5-A93C-DD5B4CCE422F} = {DCF0C28F-B844-4C6C-B20E-76E6D1107DB8}
+		{BB9EC5E7-581F-444C-9EB3-7A487BC56854} = {8EE7FD8F-3BFD-4E4C-8190-F5643EB2A375}
 	EndGlobalSection
 EndGlobal

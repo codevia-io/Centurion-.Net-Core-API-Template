@@ -1,11 +1,11 @@
 ﻿using Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Repository.DataBaseContexts
+namespace DataBases.Context
 {
-    public class DefaultDataBase : DbContext
+    public class DefaultContext : DbContext
     {
-		public DefaultDataBase()
+		public DefaultContext()
 		{
             Database.EnsureCreated();
         }

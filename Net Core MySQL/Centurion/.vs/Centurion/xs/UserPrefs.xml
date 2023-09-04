@@ -1,5 +1,14 @@
-﻿<Properties StartupConfiguration="{9B5496B4-A6F3-4DBC-A99E-F0C9391257E1}|https">
-  <MonoDevelop.Ide.ItemProperties.API PreferredExecutionTarget="/Applications/Firefox.app" />
+﻿<Properties StartupConfiguration="{63CB46F0-D5B7-44F5-A93C-DD5B4CCE422F}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Centurion/Mediator/Mediator.csproj</String>
+    <String>Centurion/API.csproj</String>
+    <String>Mediator/Mediator.csproj</String>
+  </DisabledProjects>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Dal.DataBases FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Dispatcher.API PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Centurion/Program.cs">
     <Files>
       <File FileName="Centurion/Program.cs" Line="31" Column="1" />
@@ -20,9 +29,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Busisnnes.Session FirstBuild="True" />
 </Properties>

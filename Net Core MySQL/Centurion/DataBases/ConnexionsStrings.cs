@@ -1,4 +1,4 @@
-﻿namespace Repository
+﻿namespace DataBases
 {
     public static class ConnexionsStrings
 	{

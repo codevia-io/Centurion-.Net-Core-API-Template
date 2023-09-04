@@ -11,16 +11,12 @@
     <ProjectReference Include="..\Enums\Enums.csproj" />
     <ProjectReference Include="..\Helpers\Helpers.csproj" />
     <ProjectReference Include="..\Catch\Catch.csproj" />
+    <ProjectReference Include="..\DataBases\DataBases.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Interfaces\" />
-    <None Remove="DataBaseContexts\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
-    <Folder Include="DataBaseContexts\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.5" />
   </ItemGroup>
 </Project>
